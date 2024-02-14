@@ -8,6 +8,9 @@ export const ProductContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const [user, setUser] = useState(null);
+  const [authError, setAuthError] = useState(null);
+
   const fetchProducts = async () => {
     try {
       setIsLoading(true);
@@ -27,7 +30,17 @@ export const ProductContextProvider = ({ children }) => {
 
   return (
     <ProductContext.Provider
-      value={{ products, isLoading, error, myCart, setMyCart }}
+      value={{
+        products,
+        isLoading,
+        error,
+        myCart,
+        setMyCart,
+        user,
+        setUser,
+        authError,
+        setAuthError,
+      }}
     >
       {children}
     </ProductContext.Provider>

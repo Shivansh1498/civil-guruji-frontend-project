@@ -27,6 +27,24 @@ body {
   margin-top: 3rem;
 }
 
+.input-box {
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.custom-btn {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
 .navbar-container {
   padding-block: 1rem;
   @include flexContainer(center, space-between);
@@ -51,6 +69,29 @@ body {
       -ms-border-radius: 5px;
       -o-border-radius: 5px;
     }
+  }
+}
+
+.login-container,
+.signup-container {
+  width: 50%;
+  max-width: 35rem;
+  border: 1px solid rgba(128, 128, 128, 0.562);
+  margin-inline: auto;
+  border-radius: 5px;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 15px 20px;
+
+  .login-container__form-wrapper,
+  .signup-container__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 90%;
   }
 }
 
